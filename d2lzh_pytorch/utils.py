@@ -18,8 +18,8 @@ from torch import nn
 import torch.nn.functional as F
 import torchvision
 import torchvision.transforms as transforms
-import torchtext
-import torchtext.vocab as Vocab
+#import torchtext
+#import torchtext.vocab as Vocab
 import numpy as np
 
 
@@ -1178,10 +1178,10 @@ def get_tokenized_imdb(data):
         return [tok.lower() for tok in text.split(' ')]
     return [tokenizer(review) for review, _ in data]
 
-def get_vocab_imdb(data):
-    tokenized_data = get_tokenized_imdb(data)
-    counter = collections.Counter([tk for st in tokenized_data for tk in st])
-    return torchtext.vocab.Vocab(counter, min_freq=5)
+#def get_vocab_imdb(data):
+#    tokenized_data = get_tokenized_imdb(data)
+#    counter = collections.Counter([tk for st in tokenized_data for tk in st])
+#    return torchtext.vocab.Vocab(counter, min_freq=5)
 
 def preprocess_imdb(data, vocab):
     max_l = 500  # 将每条评论通过截断或者补0，使得长度变成500
