@@ -683,9 +683,11 @@ class Benchmark():
 
 
 # ########################### 9.1 ########################################
-def show_images(imgs, num_rows, num_cols, scale=2):
+def show_images(imgs, num_rows, num_cols, scale=2, title=None):
     figsize = (num_cols * scale, num_rows * scale)
-    _, axes = plt.subplots(num_rows, num_cols, figsize=figsize)
+    fig, axes = plt.subplots(num_rows, num_cols, figsize=figsize)
+    if title is not None:
+        fig.suptitle(title, fontsize=16)
     for i in range(num_rows):
         for j in range(num_cols):
             axes[i][j].imshow(imgs[i * num_cols + j])
