@@ -1,4 +1,4 @@
-# pytorch_classic_cnn_models
+# d2l_pytorch_notes
 
 reference:
 

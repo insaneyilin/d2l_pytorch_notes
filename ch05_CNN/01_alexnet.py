@@ -4,6 +4,7 @@ import torch
 from torch import nn, optim
 
 import sys
+sys.path.append("..")  # to find d2lzh_pytorch
 import d2lzh_pytorch as d2l
 
 # check device
